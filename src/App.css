@@ -13,6 +13,146 @@
   }
 }
 
+.Project-Page{
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  margin: 0;
+  flex-direction: row;
+  background-position: "center";
+  background-size: "auto";
+  background-repeat: no-repeat;
+  background-image:url("./assets/ProjectBackground.png");
+
+}
+
+.Project-Left{
+  background-color: rgb(30,129,176, 0.2);
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  border: 2px solid rgb(11, 116, 165);
+  width: 75%;
+}
+.Project-Buttons{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 2px solid rgb(11, 116, 165);
+}
+
+.bg-Project-Button{
+  margin-bottom: 25px;
+  height: 75px;
+  width: 75%;
+  font-size: 1.2rem;
+  color:white;
+  background-color: rgb(30,129,176, 0.5);
+  border-radius:15px 50px 30px;
+  border: 2px solid rgb(30,129,176);
+  transition: all .35s;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 rgb(30,129,176, 0.5);
+}
+
+.bg-Project-Button:Hover {
+  background-color: rgb(30,129,176, 0.9);
+  box-shadow: inset 0 0 0 50px rgb(30,129,176, 0.5);
+}
+
+
+.Project-Description{
+  color: white;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+
+
+@keyframes perspectiveAnim{
+  from{transform: perspective(400px) rotateY(7deg)}
+  to{transform: perspective(400px) rotateY(-7deg)}
+}
+
+.Profile-Pic{
+  width: 350px;
+  height: 350px;
+  animation-name: perspectiveAnim;
+  animation-duration:4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 50%;
+}
+
+
+.Project-Image{
+  object-fit: contain;
+  height: 50%;
+  margin-bottom: 1rem;
+
+}
+.Project-View{
+
+  padding-left: 5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+ 
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 350ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity  350ms;
+}
+
+.fadeIn{
+  opacity:1;
+  animation: fadeIn 400ms;
+}
+.fadeOut{
+  opacity:0;
+  animation: fadeOut 400ms;
+  animation-iteration-count: 1;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,17 +162,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
