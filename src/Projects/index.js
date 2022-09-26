@@ -34,7 +34,8 @@ const ProjectView = React.forwardRef((props, ref) => {
           color: "white",
           textAlign: "left",
           fontWeight: "lighter",
-          marginBottom: "4rem",
+          marginBottom: "3.5rem",
+          marginTop: "4rem",
         }}
       >
         {props.projectName}
@@ -65,6 +66,7 @@ const Projects = () => {
           style={{
             position: "absolute",
             marginLeft: "2rem",
+            marginTop: "2rem",
             display: "flex",
             alignItems: "center",
             flexDirection: "row",
@@ -87,7 +89,8 @@ const Projects = () => {
           {ProjectsData.map(function (obj, idx) {
             return (
               <Button
-                className="Project-Button"
+                bsPrefix="bg-Project-Button"
+                btn
                 key={idx}
                 onClick={() => OnClickProjectBtn(obj)}
               >

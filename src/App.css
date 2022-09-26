@@ -46,11 +46,11 @@
   border: 2px solid rgb(11, 116, 165);
 }
 
-.Project-Button{
+.bg-Project-Button{
   margin-bottom: 25px;
   height: 75px;
   width: 75%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color:white;
   background-color: rgb(30,129,176, 0.5);
 
@@ -60,7 +60,7 @@
   box-shadow: inset 0 0 0 0 rgb(30,129,176, 0.5);
 }
 
-.Project-Button:Hover {
+.bg-Project-Button:Hover {
   background-color: rgb(30,129,176, 0.9);
   box-shadow: inset 0 0 0 50px rgb(30,129,176, 0.5);
 }
@@ -92,6 +92,7 @@
 .Project-Image{
   object-fit: contain;
   height: 50%;
+  margin-bottom: 1rem;
 }
 .Project-View{
 
