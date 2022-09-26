@@ -4,7 +4,7 @@ import CP2077 from "../assets/CP2077.png";
 import OceanScene from "../assets/OceanProject.png";
 import ProfilePic from "../assets/person.png";
 import ReturnIcon from "../assets/ReturnIcon.png";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Background from "../assets/ProjectBackground.png";
 import { Button } from "react-bootstrap";
 import useAudio from "../Hooks/useAudio";
