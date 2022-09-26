@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, Route, RouterProvider } from 'react-router-dom';
-import Home from './Home'
-import "bootstrap/dist/css/bootstrap.css"
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
+import Home from "./Home";
+import "bootstrap/dist/css/bootstrap.css";
+import Projects from "./Projects/index";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const router = createBrowserRouter([
   {
@@ -15,15 +15,18 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: "/Projects",
+    element: <Projects />,
+  },
+  {
     path: "/profile",
     element: <Home />,
   },
 ]);
 
-
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
