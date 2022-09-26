@@ -1,0 +1,73 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, p {
+  color: white;
+}
+
+.home-container{
+  background-color: #000;
+  height: 100vh;
+}
+
+.rhombus-container{
+  display: inline-block;
+width: 30%;
+height: 40%;
+padding:22px;
+min-height: 300px;
+max-height: 600px;
+border: 1px solid #000;
+
+transform: skewX(-10deg);
+transition: transform 100ms;
+}
+
+.bg-blue{
+  background-color: #273BE2;
+}
+
+.bg-red{
+  background-color: #E34234;
+}
+
+.bg-yellow{
+  background-color: #FFA500;
+}
+
+.rhombus-content{
+
+  transform: skewX(10deg);
+}
+
+.rhombus-container:hover { 
+
+  transform: skew(-10deg) scale(1.2);
+  box-shadow: 0px 3px 30px 4px rgba(215, 215, 215, 0.3);
+
+}
+
+.dots__blink1{
+  animation: blink 1.2s infinite 200ms;
+}
+
+.dots__blink2{
+  animation: blink 1.2s infinite 600ms;
+}
+
+.dots__blink3{
+  animation: blink 1.2s infinite 1000ms;
+}
+
+
+/* Animations */
+
+@keyframes blink {
+  0% { opacity: 0; }
+
+  100% { opacity: 1; }
+}
