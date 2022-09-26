@@ -4,9 +4,14 @@ import CP2077 from "../assets/CP2077.png";
 import OceanScene from "../assets/OceanProject.png";
 import ProfilePic from "../assets/person.png";
 import ReturnIcon from "../assets/ReturnIcon.png";
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Background from "../assets/ProjectBackground.png";
 import { Button } from "react-bootstrap";
+import useAudio from "../Hooks/useAudio";
+import cyberMusic from "../assets/EpicCyberpunk.mp3";
+
+import PauseIcon from "../assets/pause-button.png";
+import PlayIcon from "../assets/play-button.png";
 
 let ProjectsData = [
   {
@@ -26,9 +31,9 @@ let ProjectsData = [
   },
 ];
 
-const ProjectView = React.forwardRef((props, ref) => {
+const ProjectView = (props) => {
   return (
-    <div className="Project-View" ref={ref}>
+    <div className="Project-View">
       <h1
         style={{
           color: "white",
@@ -44,12 +49,12 @@ const ProjectView = React.forwardRef((props, ref) => {
       <p className="Project-Description">{props.projectDescription}</p>
     </div>
   );
-});
+};
 
 const Projects = () => {
   const [project, setCurrentProject] = useState(ProjectsData[0]);
   const [fade, setFade] = useState(false);
-  const [fadeCSS, setFadeCSS] = useState("");
+  const [playing, setPlay] = useAudio(cyberMusic);
   const OnClickProjectBtn = (data) => {
     setFade(false);
     setTimeout(() => {
@@ -59,6 +64,7 @@ const Projects = () => {
       setFade(true);
     }, 460);
   };
+
   return (
     <div className="Project-Page">
       <div className="Project-Left">
@@ -90,7 +96,6 @@ const Projects = () => {
             return (
               <Button
                 bsPrefix="bg-Project-Button"
-                btn
                 key={idx}
                 onClick={() => OnClickProjectBtn(obj)}
               >
@@ -115,9 +120,32 @@ const Projects = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          alignItems: "center",
+          width: "25%",
         }}
       >
         <img className="Profile-Pic" src={ProfilePic} />
+        <Button
+          style={{
+            width: "85px",
+            height: "85px",
+            margin: "50px",
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+            backgroundColor: "transparent",
+            border: "none",
+          }}
+          onClick={() => setPlay(!playing)}
+        >
+          <img
+            src={playing ? PauseIcon : PlayIcon}
+            style={{
+              width: "85px",
+              height: "85px",
+            }}
+          />
+        </Button>
       </div>
     </div>
   );
