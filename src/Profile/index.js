@@ -1,14 +1,23 @@
 /* eslint-disable jsx-a11y/alt-text */
 import "../App.css";
-import ProfilePic from "../assets/chris.png";
 import ReturnIcon from "../assets/ReturnIcon.png";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { motion } from "framer-motion";
 import AudioBtn from "../Projects/AudioBtn";
 import MovingProfile from "../Projects/MovingProfile";
+import { useParams } from "react-router-dom";
 
 const Profile = () => {
+  const [profile, setProfile] = useState(undefined);
+  const { name } = useParams();
+  let Profiles = require("../Data/ProfileData.json");
+
+  useEffect(() => {
+    var jsonProfile = Profiles["data"].find((o) => o.name == name);
+    setProfile(jsonProfile);
+  });
+
   return (
     <div className="Whole-Page">
       <div className="Project-Page ">
@@ -28,35 +37,29 @@ const Profile = () => {
                       flexDirection: "row",
                     }}
                   >
-                    <img
-                      src={ReturnIcon}
-                      styles={{ width: "50px", height: "50px" }}
-                      href="/"
-                    />
+                    <a href="/">
+                      <img
+                        src={ReturnIcon}
+                        styles={{ width: "50px", height: "50px" }}
+                      />
+                    </a>
                   </div>
                 </Row>
                 <Row style={{ marginTop: "175px" }}>
                   <h1>About me:</h1>
-                  <p>
-                    → I am student software engineer and I love to code
-                    everyday.
-                  </p>
+                  <p>{profile && profile.aboutMe}</p>
                 </Row>
                 <Row>
                   <h1> Role:</h1>
-                  <p> → Developer</p>
+                  <p> {profile && profile.role}</p>
                 </Row>
                 <Row>
                   <h1> Qualifications:</h1>
-                  <p>
-                    {" "}
-                    → Master of Information Technology (Software Development)
-                  </p>
+                  <p>{profile && profile.qualifications}</p>
                 </Row>
                 <Row>
                   <h1> Experience:</h1>
-                  <p> → Frontend Developer</p>
-                  <p> → Part-time web developer</p>
+                  {profile && profile.experience.map((item) => <p>→ {item}</p>)}
                 </Row>
               </Col>
               <Col>
@@ -64,16 +67,12 @@ const Profile = () => {
                   <h1>Skills</h1>
                 </Row>
                 <Row>
-                  <p>→ JavaScript 🔥</p>
-                  <p>→ CSS 🔥</p>
-                  <p>→ HTML 🔥</p>
-                  <p>→ React 👍</p>
-                  <p>→ Angular 👍</p>
-                  <p>→ TypeScript 👍</p>
-                  <p>→ C# 👍</p>
-                  <p>→ Java 👍</p>
-                  <p>→ MongoDB 👍</p>
-                  <p>→ SQL 👍</p>
+                  {profile &&
+                    profile.skills.map((skill) => (
+                      <p>
+                        → {skill.skillName} {skill.emoji}
+                      </p>
+                    ))}
                 </Row>
               </Col>
             </Row>
@@ -89,14 +88,15 @@ const Profile = () => {
             width: "25%",
           }}
         >
-          <MovingProfile ProfilePic={ProfilePic} />
+          {profile && <MovingProfile imageUrl={profile.imageUrl} />}
+
           <AudioBtn />
         </div>
       </div>
       <div className="Nav-Bar">
-        <NavButton text="Home" />
-        <NavButton text="Projects" />
-        <NavButton text="About" />
+        <NavButton text="Home" href="/" />
+        <NavButton text="Projects" href={"/projects/" + name} />
+        <NavButton text="Profile" href={"/profile/" + name} />
       </div>
     </div>
   );
@@ -104,12 +104,14 @@ const Profile = () => {
 
 const NavButton = (props) => {
   return (
-    <motion.button
-      whileHover={{ scale: 1.1, color: "white" }}
-      className="Nav-Button"
-    >
-      {props.text}
-    </motion.button>
+    <a href={props.href}>
+      <motion.button
+        whileHover={{ scale: 1.1, color: "#FFFFFF" }}
+        className="Nav-Button"
+      >
+        {props.text}
+      </motion.button>
+    </a>
   );
 };
 

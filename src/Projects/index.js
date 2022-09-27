@@ -101,7 +101,9 @@ const ProjectsScreen = () => {
               flexDirection: "row",
             }}
           >
-            <img src={ReturnIcon} style={{ width: "50px", height: "50px" }} />
+            <a href="/">
+              <img src={ReturnIcon} style={{ width: "50px", height: "50px" }} />
+            </a>
             <h1
               style={{
                 color: "white",
