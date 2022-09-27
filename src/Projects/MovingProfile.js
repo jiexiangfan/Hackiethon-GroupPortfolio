@@ -16,7 +16,7 @@ const MovingProfile = (props) => {
         type: "easeInOut",
       }}
       className="Profile-Pic"
-      src={props.ProfilePic}
+      src={require("../assets/" + props.imageUrl)}
     />
   );
 };

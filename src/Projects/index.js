@@ -2,33 +2,14 @@ import "../App.css";
 import TrumpImage from "../assets/Trump.png";
 import CP2077 from "../assets/CP2077.png";
 import OceanScene from "../assets/OceanProject.png";
-import ProfilePic from "../assets/person.png";
 import ReturnIcon from "../assets/ReturnIcon.png";
 import React, { useState, useEffect } from "react";
-import { useGetProfileUsingParam } from "../Hooks/getProfile";
-
+import { Button } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import SelectBtn from "./SelectionBtn.js";
 import AudioBtn from "./AudioBtn.js";
 import MovingProfile from "./MovingProfile.js";
-
-let ProjectsData = [
-  {
-    projectName: "Hackathon",
-    projectDescription: "This is a project I made",
-    img: TrumpImage,
-  },
-  {
-    projectName: "Project 2",
-    projectDescription: "This is another project",
-    img: CP2077,
-  },
-  {
-    projectName: "Floatation tank project",
-    projectDescription: "This is a scene I made for floatation tank",
-    img: OceanScene,
-  },
-];
 
 const ProjectView = (props) => {
   const container = {
@@ -93,13 +74,18 @@ const ProjectView = (props) => {
   );
 };
 
-const Projects = () => {
-  const [project, setCurrentProject] = useState(ProjectsData[0]);
+const ProjectsScreen = () => {
+  const [project, setCurrentProject] = useState(undefined);
+  const [profile, setProfile] = useState(undefined);
+  const [projects, setProjects] = useState(undefined);
+  const { name } = useParams();
+  let Profiles = require("../Data/ProfileData.json");
 
-  let foundProfile = useGetProfileUsingParam();
   useEffect(() => {
-    console.log(foundProfile);
-  }, []);
+    var jsonProfile = Profiles["data"].find((o) => o.name == name);
+    setProjects(jsonProfile["projects"]);
+    setProfile(jsonProfile);
+  });
 
   return (
     <div className="Whole-Page">
@@ -128,15 +114,17 @@ const Projects = () => {
           </div>
 
           <div className="Project-Buttons">
-            {ProjectsData.map(function (obj, idx) {
-              return (
-                <SelectBtn
-                  projectName={obj.projectName}
-                  key={idx}
-                  onClick={() => setCurrentProject(obj)}
-                />
-              );
-            })}
+            {projects &&
+              projects.map(function (obj, idx) {
+                return (
+                  <SelectBtn
+                    key={idx}
+                    projectName={obj.projectName}
+                    index={idx}
+                    onClick={() => setCurrentProject(obj)}
+                  />
+                );
+              })}
           </div>
           <div
             style={{
@@ -146,11 +134,13 @@ const Projects = () => {
             }}
           >
             <AnimatePresence>
-              <ProjectView
-                projectName={project.projectName}
-                imageSrc={project.img}
-                projectDescription={project.projectDescription}
-              />
+              {project != undefined && (
+                <ProjectView
+                  projectName={project.projectName}
+                  imageSrc={require("../assets/" + project.projectImage)}
+                  projectDescription={project.projectDescription}
+                />
+              )}
             </AnimatePresence>
           </div>
         </div>
@@ -163,12 +153,13 @@ const Projects = () => {
             width: "25%",
           }}
         >
-          <MovingProfile ProfilePic={ProfilePic} />
+          {profile && <MovingProfile imageUrl={profile.imageUrl} />}
+
           <AudioBtn />
         </div>
       </div>
       <div className="Nav-Bar">
-        <NavButton text="Home" />
+        <NavButton text="Home" href="/" />
         <NavButton text="Projects" />
         <NavButton text="About" />
       </div>
@@ -179,12 +170,13 @@ const Projects = () => {
 const NavButton = (props) => {
   return (
     <motion.button
-      whileHover={{ scale: 1.1, color: "white" }}
+      whileHover={{ scale: 1.1, color: "#FFFFFF" }}
       className="Nav-Button"
+      href={props.href}
     >
       {props.text}
     </motion.button>
   );
 };
 
-export default Projects;
+export default ProjectsScreen;

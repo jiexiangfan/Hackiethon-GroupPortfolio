@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
 import Home from "./Home/Home";
 import "bootstrap/dist/css/bootstrap.css";
-import Projects from "./Projects/index";
+import ProjectsScreen from "./Projects/index";
 import Profile from "./Profile/index";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Projects/:name",
-    element: <Projects />,
+    element: <ProjectsScreen />,
   },
   {
     path: "/Profile/:name",
