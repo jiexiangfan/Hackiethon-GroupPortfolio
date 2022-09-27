@@ -80,7 +80,7 @@ const profileData = [
   {
     name: "Chris",
     imageUrl: "chris.png",
-    role: "Developer",
+    role: "Software Engineer",
     profileLink: "/Profile/Chris",
     aboutMe: "I am student software engineer and I love to code everyday.",
     qualifications: ["Master of Information Technology (Software Development)"],
