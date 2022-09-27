@@ -11,9 +11,9 @@ import MovingProfile from "../Projects/MovingProfile";
 const Profile = () => {
   return (
     <div className="Whole-Page">
-      <div className="Project-Page">
+      <div className="Project-Page ">
         <div className="Project-Left">
-          <Container>
+          <Container className="Profile-Page">
             <Row>
               <Col>
                 <Row>
@@ -31,6 +31,7 @@ const Profile = () => {
                     <img
                       src={ReturnIcon}
                       styles={{ width: "50px", height: "50px" }}
+                      href="/"
                     />
                   </div>
                 </Row>
