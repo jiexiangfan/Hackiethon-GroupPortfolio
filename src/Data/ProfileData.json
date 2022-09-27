@@ -46,7 +46,11 @@
           "emoji": "👍"
         }
       ],
-      "experience": ["Intern Consultant", "Frontend developer"],
+      "experience": [
+        "Intern consultant",
+        "Frontend developer",
+        "Experienced gamer"
+      ],
       "contact": [
         {
           "platformName": "linkedin",
@@ -59,6 +63,12 @@
           "projectImage": "jieProject_researchify.png",
           "projectDescription": "Researchify is a web application that allows researchers to publish websites for their research profiles on GitHub pages. It targets researchers without any programming nor graphic design knowledge. It is a full-year project provided by Monash University.",
           "projectLink": "https://github.com/Researchify/Researchify"
+        },
+        {
+          "projectName": "edJourney",
+          "projectImage": "jieProject-edJourney.png",
+          "projectDescription": "edJourney is an online platform where students can share a topic (also called a Journey) and learn form Journeys shared by others. Each Journey will have step-by-step milestones that guides a user to achieve a learning outcome. Users can also mark their learning progress with the progress bar feature.",
+          "projectLink": "https://devpost.com/software/ed-journey"
         }
       ]
     },
