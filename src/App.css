@@ -438,5 +438,6 @@ p {
 
 .Profile-Page {
   background-color: rgba(30, 129, 176, 0.2);
+  min-width: 100%;
   opacity: 1;
 }

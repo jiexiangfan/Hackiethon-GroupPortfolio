@@ -23,7 +23,7 @@ const Profile = () => {
       <div className="Project-Page ">
         <div className="Project-Left">
           <Container className="Profile-Page">
-            <Row>
+            <Row style={{ paddingLeft: "2%" }}>
               <Col>
                 <Row>
                   {" "}
