@@ -7,19 +7,19 @@ const profileData = [
     name: "Jie",
   imageUrl: "jie.png",
   role:"Developer",
-  profileLink: "./Profile/Jie"
+  profileLink: "/Profile/Jie"
   },
   {
   name: "Jerry",
   imageUrl: "jerry.png",
   role:"Developer",
-  profileLink: "./Profile/Jerry"
+  profileLink: "/Profile/Jerry"
   },
   {
     name: "Chris",
     imageUrl: "chris.png",
     role:"Developer",
-    profileLink: "./Profile/Chris"
+    profileLink: "/Profile/Chris"
     },
 ]
 

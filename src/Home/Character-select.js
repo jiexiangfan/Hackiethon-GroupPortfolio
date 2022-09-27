@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import '../App.css';
 
 function CharacterSelect({ bgClass, props }) {
   return (
@@ -8,7 +7,7 @@ function CharacterSelect({ bgClass, props }) {
         <div class="name_box">
           <h1>{props.name}</h1>
         </div>
-        <img src={props.imageUrl} alt={props.name + "image"} class="mb-3"/>
+        <img src={require("../assets/" + props.imageUrl)} alt={props.name + "image"} class="mb-3"/>
         <h2 class="role_text">{props.role}</h2>
       </div>
     </a>

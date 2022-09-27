@@ -1,5 +1,5 @@
 import "../App.css";
-import CharacterSelect from "../Character-select";
+import CharacterSelect from "./Character-select";
 import { useState, useEffect } from "react";
 import { useGetAllProfiles, useGetProfileUsingParam } from "../Hooks/getProfile";
 
