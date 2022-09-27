@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
 import Home from "./Home/Home";
 import "bootstrap/dist/css/bootstrap.css";
-import Projects from "./Projects/index.js";
+import Projects from "./Projects/index";
+import Profile from "./Profile/index";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const router = createBrowserRouter([
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Profile/:name",
-    element: <Home />,
+    element: <Profile />,
   },
 ]);
 
