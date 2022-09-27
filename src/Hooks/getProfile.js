@@ -6,11 +6,65 @@ const profileData = [
     name: "Jie",
     imageUrl: "jie.png",
     role: "Software Engineer",
-    qualifications: ["Bachelor of Software Engineering (Honours)"],
-    experience: ["Intern Consultant", "Frontend developer"],
+    profileLink: "/Profile/Jie",
     aboutMe:
       "I am a student software engineer who is passionate about creating new things. I am currently studying at the Monash University and I am looking for a full time role in the software industry. I am a fast learner and I am always looking to improve my skills. I am also a team player and I am always willing to help others.",
-    profileLink: "/Profile/Jie",
+    qualifications: ["Bachelor of Software Engineering (Honours)"],
+    skills: [
+      {
+        skillName: "Python",
+        emoji: "🔥",
+      },
+      {
+        skillName: "MongoDB",
+        emoji: "🔥",
+      },
+      {
+        skillName: "JavaScript",
+        emoji: "👍",
+      },
+      {
+        skillName: "MongoDB",
+        emoji: "👍",
+      },
+      {
+        skillName: "React",
+        emoji: "👍",
+      },
+      {
+        skillName: "Neo4j",
+        emoji: "👍",
+      },
+      {
+        skillName: "Cassandra",
+        emoji: "👍",
+      },
+      {
+        skillName: "Java",
+        emoji: "👍",
+      },
+
+      {
+        skillName: "Golang",
+        emoji: "👍",
+      },
+    ],
+    experience: ["Intern Consultant", "Frontend developer"],
+    contact: [
+      {
+        platformName: "linkedin",
+        contactLink: "https://www.linkedin.com/in/jiexiangfan/",
+      },
+    ],
+    projects: [
+      {
+        projectName: "Researchify",
+        projectImage: "jieProject_researchify.png",
+        projectDescription:
+          "Researchify is a web application that allows researchers to publish websites for their research profiles on GitHub pages. It targets researchers without any programming nor graphic design knowledge. It is a full-year project provided by Monash University.",
+        projectLink: "https://github.com/Researchify/Researchify",
+      },
+    ],
   },
 
   {
