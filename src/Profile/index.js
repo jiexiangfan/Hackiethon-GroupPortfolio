@@ -4,8 +4,6 @@ import ProfilePic from "../assets/chris.png";
 import ReturnIcon from "../assets/ReturnIcon.png";
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import useAudio from "../Hooks/useAudio";
-import cyberMusic from "../assets/EpicCyberpunk.mp3";
 import { motion } from "framer-motion";
 import AudioBtn from "../Projects/AudioBtn";
 import MovingProfile from "../Projects/MovingProfile";
@@ -13,9 +11,9 @@ import MovingProfile from "../Projects/MovingProfile";
 const Profile = () => {
   return (
     <div className="Whole-Page">
-      <div className="Project-Page">
+      <div className="Project-Page ">
         <div className="Project-Left">
-          <Container>
+          <Container className="Profile-Page">
             <Row>
               <Col>
                 <Row>
@@ -33,31 +31,32 @@ const Profile = () => {
                     <img
                       src={ReturnIcon}
                       styles={{ width: "50px", height: "50px" }}
+                      href="/"
                     />
                   </div>
                 </Row>
                 <Row style={{ marginTop: "175px" }}>
                   <h1>About me:</h1>
                   <p>
-                    -> I am student software engineer and I love to code
+                    → I am student software engineer and I love to code
                     everyday.
                   </p>
                 </Row>
                 <Row>
                   <h1> Role:</h1>
-                  <p> -> Developer</p>
+                  <p> → Developer</p>
                 </Row>
                 <Row>
                   <h1> Qualifications:</h1>
                   <p>
                     {" "}
-                    -> Master of Information Technology (Software Development)
+                    → Master of Information Technology (Software Development)
                   </p>
                 </Row>
                 <Row>
                   <h1> Experience:</h1>
-                  <p> -> Frontend Developer</p>
-                  <p> -> Part-time web developer</p>
+                  <p> → Frontend Developer</p>
+                  <p> → Part-time web developer</p>
                 </Row>
               </Col>
               <Col>
@@ -65,16 +64,16 @@ const Profile = () => {
                   <h1>Skills</h1>
                 </Row>
                 <Row>
-                  <p>-> JavaScript 🔥</p>
-                  <p>-> CSS 🔥</p>
-                  <p>-> HTML 🔥</p>
-                  <p>-> React 👍</p>
-                  <p>-> Angular 👍</p>
-                  <p>-> TypeScript 👍</p>
-                  <p>-> C# 👍</p>
-                  <p>-> Java 👍</p>
-                  <p>-> MongoDB 👍</p>
-                  <p>-> SQL 👍</p>
+                  <p>→ JavaScript 🔥</p>
+                  <p>→ CSS 🔥</p>
+                  <p>→ HTML 🔥</p>
+                  <p>→ React 👍</p>
+                  <p>→ Angular 👍</p>
+                  <p>→ TypeScript 👍</p>
+                  <p>→ C# 👍</p>
+                  <p>→ Java 👍</p>
+                  <p>→ MongoDB 👍</p>
+                  <p>→ SQL 👍</p>
                 </Row>
               </Col>
             </Row>
