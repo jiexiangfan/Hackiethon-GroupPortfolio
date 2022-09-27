@@ -5,11 +5,6 @@ import OceanScene from "../assets/OceanProject.png";
 import ProfilePic from "../assets/person.png";
 import ReturnIcon from "../assets/ReturnIcon.png";
 import React, { useState, useEffect } from "react";
-import { Button } from "react-bootstrap";
-import useAudio from "../Hooks/useAudio";
-import cyberMusic from "../assets/EpicCyberpunk.mp3";
-import PauseIcon from "../assets/pause-button.png";
-import PlayIcon from "../assets/play-button.png";
 import { useGetProfileUsingParam } from "../Hooks/getProfile";
 
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
