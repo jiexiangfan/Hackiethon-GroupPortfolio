@@ -1,7 +1,5 @@
 import "../App.css";
-import TrumpImage from "../assets/Trump.png";
-import CP2077 from "../assets/CP2077.png";
-import OceanScene from "../assets/OceanProject.png";
+
 import ReturnIcon from "../assets/ReturnIcon.png";
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
