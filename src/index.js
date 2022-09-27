@@ -6,12 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
 import Home from "./Home/Home";
 import "bootstrap/dist/css/bootstrap.css";
-import Projects from "./Projects/index";
+import Projects from "./Projects";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-
-
-
 
 const router = createBrowserRouter([
   {
