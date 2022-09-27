@@ -1,4 +1,5 @@
 {
+
   "data": [
     {
       "name": "Jie",
@@ -73,78 +74,103 @@
       ]
     },
     {
-      "name": "Jerry",
-      "imageUrl": "jerry.png",
-      "role": "Software Engineer",
-      "aboutMe": "I am student software engineer and I love to code everyday.",
-      "qualifications": "Bachelor of CS and SE",
-      "experience": ["VR Game developer"],
-      "profileLink": "/Profile/Jerry",
-      "skills": [
-        {
-          "skillName": "JavaScript/TypeScript",
-          "emoji": "🔥"
-        },
-        {
-          "skillName": "C#",
-          "emoji": "🔥"
-        },
-        {
-          "skillName": "Java",
-          "emoji": "👍"
-        },
-        {
-          "skillName": "Python",
-          "emoji": "👍"
-        },
-        {
-          "skillName": "CSS",
-          "emoji": "🔥"
-        },
-        {
-          "skillName": "HTML",
-          "emoji": "🔥"
-        },
-        {
-          "skillName": "React",
-          "emoji": "👍"
-        },
-        {
-          "skillName": "MongoDB",
-          "emoji": "👍"
-        },
-        {
-          "skillName": "Android Studio",
-          "emoji": "👍"
-        },
-        {
-          "skillName": "Unity 3D",
-          "emoji": "🔥"
-        },
-        {
-          "skillName": "Blender",
-          "emoji": "👍"
-        }
-      ],
-      "contact": [
-        {
-          "platformName": "linkedin",
-          "contactLink": "https://www.linkedin.com/in/yuyang-ji-525566208/"
-        }
-      ],
-      "projects": [
-        {
-          "projectName": "Exercise Map",
-          "projectImage": "chrisProject_exerciseMap.jpg",
-          "projectDescription": "Users can pick a location on the map and record the exercise they did. Users can log their activity, time and make comments to track their progress. Whether it is running, team sport, or gym, an emoji will automatically be generated. It is a JavaScript-based application and uses the Leaflet API.",
-          "projectLink": "https://exercise-map-by-chris.herokuapp.com/"
-        },
-        {
-          "projectName": "Communla Stickies Wall",
-          "projectImage": "chrisProject_stickiesWall.jpg",
-          "projectDescription": "Users can share a sticky note with a message for everyone to see. They can also choose the colour of their sticky note. They can share a joke, their thoughts, have a vent...etc. It is a react based application using MongoDB to save the note and colour data.",
-          "projectLink": "https://stickies-wall-by-chris.herokuapp.com/"
-        }
+        "name":"Jerry",
+        "imageUrl":"jerry.png",
+        "role":"Software Engineer",
+        "aboutMe":"I am an Australian student currently studying at Monash Uni. I am passionate about software engineering, learning new technologies, and evolving or creating new ideas. I like to appreciate and be fascinated by the creative works of others. My ambition is to push VR experiences to its limits, and explore and pioneer innovative ways we can do this. I have extensive personal experience in VR game development for Unity. I am currently working on a VR game whilst studying.",
+        "qualifications":[
+           "Bachelor of CS and SE"
+        ],
+        "experience":[
+           "VR Game Dev", "Frontend Dev", "Backend Dev"
+        ],
+        "profileLink":"/Profile/Jerry",
+        "skills":[
+           {
+              "skillName":"JavaScript/TypeScript",
+              "emoji":"🔥"
+           },
+           {
+              "skillName":"C#",
+              "emoji":"🔥"
+           },
+           {
+              "skillName":"Java",
+              "emoji":"👍"
+           },
+           {
+              "skillName":"Python",
+              "emoji":"👍"
+           },
+           {
+              "skillName":"CSS",
+              "emoji":"🔥"
+           },
+           {
+              "skillName":"HTML",
+              "emoji":"🔥"
+           },
+           {
+              "skillName":"React",
+              "emoji":"👍"
+           },
+           {
+              "skillName":"MongoDB",
+              "emoji":"👍"
+           },
+           {
+              "skillName":"Android Studio",
+              "emoji":"👍"
+           },
+           {
+              "skillName":"Unity 3D",
+              "emoji":"🔥"
+           },
+           {
+              "skillName":"Blender",
+              "emoji":"👍"
+           }
+        ],
+        "contact":[
+           {
+              "platformName":"linkedin",
+              "contactLink":"https://www.linkedin.com/in/yuyang-ji-525566208/"
+           }
+        ],
+        "projects":[
+           {
+              "projectName":"Underwater VR experience",
+              "projectImage":"OceanProject.png",
+              "projectDescription":"In the first scene there were three game elements that we wanted to focus on- Using light to induce awe, we wanted to try and regulate the player’s breathing, and we wanted to induce the dissolution of self. The dissolution of self was achieved by altering the player’s virtual body to look as if it had itself become water, and using post-processing effects such as increasing the intensity of chromatic aberration and the vignette.The purpose of this scene was to slowly ease the player into a relaxed state. The best approach to this is to try and regulate the player’s breathing. To achieve this, semi-transparent mushrooms that glow brightly were placed on the rocky side walls of the environment in the peripheral of the player’s view. Hallucinogens are mostly commonly associated with magic mushrooms, a type of fungi that contains the psychoactive compound, psilocybin",
+              "projectLink":"https://exercise-map-by-chris.herokuapp.com/"
+           },
+           {
+              "projectName":"Psychedelic VR experience",
+              "projectImage":"Psychedelic.png",
+              "projectDescription":"The space environment was chosen as the psychedelic scene. The backdrop in front of the player is a cosmic sized feminine gender-neutral human looking downwards with her/his hands cupped, as if holding water. Floating beside at head level are two distant planets with an animated psychedelic material. Surrounding the entire scene is a semi-transparent dome with an animated kaleidoscope-like shader applied. The humans and planets in the backdrop aim to give a sense of vastness. The player floats at the centre of an infinite open lane surrounded by various interesting compositions at the sides, spawning in an infinite loop towards the horizon. These compositions consist of various small islands with waterfalls. Some islands have iridescently colored humans sitting in a meditative pose. Most of these small islands have trees with continuously changing hues. A post-processing effect is added to slowly continuously change the hue of the entire scene, making the world feel alive with surreal colour. In this scene the player’s virtual body is removed. The reason for this is that we wanted to make this scene an OBE.",
+              "projectLink":"https://stickies-wall-by-chris.herokuapp.com/"
+           },
+           {
+              "projectName": "Dreamwalk UAT app",
+               "projectImage": "dreamwalk.png",
+               "projectDescription": "User Acceptance Testing app",
+               "projectLink":"https://stickies-wall-by-chris.herokuapp.com/"
+
+           },
+           {
+              "projectName": "Cyberpunk Game",
+               "projectImage": "Drone.png",
+               "projectDescription": "Developing a cyberpunk style VR survivor game. Here's a robot I made in blender",
+               "projectLink":"https://stickies-wall-by-chris.herokuapp.com/"
+
+           },
+           {
+              "projectName": "LED visualiser",
+               "projectImage": "LedVisualizer.jpg",
+               "projectDescription": "An LED audio visualiser I made for a university project. Reacts to audio in the surroundings. LED lights move outwards depending on volume of surroundings.",
+               "projectLink":"https://stickies-wall-by-chris.herokuapp.com/"
+
+           }
       ]
     },
     {

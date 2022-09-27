@@ -53,7 +53,7 @@ const ProjectView = (props) => {
         style={{
           color: "white",
           textAlign: "left",
-          marginBottom: "3.5rem",
+          marginBottom: "2rem",
           marginTop: "4rem",
           textDecorationLine: "underline",
         }}
