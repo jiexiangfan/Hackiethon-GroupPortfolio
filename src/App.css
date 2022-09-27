@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Nebula';
-  src: local('Nebula'), url(./fonts/Nebula.ttf) format('ttf');
+  font-family: "Nebula";
+  src: local("Nebula"), url(./fonts/Nebula.ttf) format("ttf");
   /* other formats include: 'woff2', 'truetype, 'opentype',
                             'embedded-opentype', and 'svg' */
 }
 
-.Whole-Page{
+.Whole-Page {
   position: fixed;
   margin: 0;
   width: 100vw;
@@ -15,46 +15,45 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image:url("./assets/home-bg.jpg");
-  font-family: 'Nebula'
+  background-image: url("./assets/home-bg.jpg");
+  font-family: "Nebula";
 }
 
-.Project-Page{
+.Project-Page {
   display: flex;
   flex-direction: row;
   width: 100%;
   min-width: 100%;
   height: 85%;
-  min-height:85%;
+  min-height: 85%;
 }
-.Nav-Bar{
+.Nav-Bar {
   position: absolute;
   margin-bottom: 10px;
   width: 100%;
-  height:120px;
-  bottom:0px;
-  display:flex;
+  height: 120px;
+  bottom: 0px;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   background-repeat: no-repeat;
   background-position: center;
-  background-image:url("./assets/nav.png");
+  background-image: url("./assets/nav.png");
   align-items: center;
-  padding-top:30px;
+  padding-top: 30px;
 }
 
-.Nav-Button{
-  height:85px;
+.Nav-Button {
+  height: 85px;
   width: 120px;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.76);
-  border:none !important;
-  margin:auto 10px ;
+  border: none !important;
+  margin: auto 10px;
   font-size: 1.2rem;
 }
 
-
-.Project-Left{
+.Project-Left {
   display: flex;
   flex-direction: row;
   margin-top: 50px;
@@ -63,14 +62,13 @@
   width: 75%;
   max-width: 75%;
   min-width: 75%;
-  box-shadow:
-  inset 0 0 25px rgba(255, 255, 255, 0.7),      /* inner white */
-  inset 20px 0 20px rgb(63, 48, 102, 0.5),   /* inner left magenta short */
-  0 0 15px rgb(76, 149, 184, 0.5),            /* outer white */
-  -10px 0 15px rgba(58, 153, 177, 0.5),        /* outer left magenta */
-  10px 0 15px rgba(58, 153, 177, 0.5);         /* outer right cyan */
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.7),
+    /* inner white */ inset 20px 0 20px rgb(63, 48, 102, 0.5),
+    /* inner left magenta short */ 0 0 15px rgb(76, 149, 184, 0.5),
+    /* outer white */ -10px 0 15px rgba(58, 153, 177, 0.5),
+    /* outer left magenta */ 10px 0 15px rgba(58, 153, 177, 0.5); /* outer right cyan */
 }
-.Project-Buttons{
+.Project-Buttons {
   display: flex;
   flex-direction: column;
   width: 25%;
@@ -78,14 +76,13 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  box-shadow:
-  inset 0 0 25px rgba(7, 81, 219, 0.822), 
+  box-shadow: inset 0 0 25px rgba(7, 81, 219, 0.822);
 }
 
-.Button-Bg{
-  background-image:url("./assets/btnBackground.png");
+.Button-Bg {
+  background-image: url("./assets/btnBackground.png");
   background-position: "center";
-  -webkit-background-size:100% 110px;
+  -webkit-background-size: 100% 110px;
   -moz-background-size: 100% 110px;
   -o-background-size: 100% 110px;
   background-size: 100% 110px;
@@ -96,46 +93,42 @@
   align-items: center;
   justify-content: center;
   display: flex;
-   transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.Button-Bg:hover{
-  background-image:url("./assets/btnBackgroundFilled.png");
+.Button-Bg:hover {
+  background-image: url("./assets/btnBackgroundFilled.png");
 }
 
-.bg-Project-Button{
+.bg-Project-Button {
   width: 95%;
   height: 100px;
   font-size: 1.2rem;
-  color:white!important;
-  background-color:transparent !important;
-  border:none !important;
+  color: white !important;
+  background-color: transparent !important;
+  border: none !important;
   cursor: pointer;
 }
 
-
-
-.Project-Description{
+.Project-Description {
   color: white;
   font-size: 1.5rem;
   text-align: left;
   font-weight: normal;
 }
 
-.Profile-Pic{
+.Profile-Pic {
   width: 350px;
   height: 350px;
   border-radius: 50%;
 }
 
-
-.Project-Image{
+.Project-Image {
   object-fit: contain;
   height: 40%;
   margin-bottom: 1rem;
-
 }
-.Project-View{
+.Project-View {
   padding-left: 5rem;
 
   width: 100%;
@@ -144,7 +137,137 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
 
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: nebulaRegular;
+}
+
+h1, h2, p {
+  color: white;
+}
+
+.home-container{
+  background-color: #000;
+  height: 100vh;
+  font-family: nebulaRegular;
+  background-image: url("./assets/home-bg.jpg");
+}
+
+.title{
+  font-size: 3.2rem;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.rhombus-container{
+display: inline-block;
+width: 30%;
+min-width: 300px;
+height: 500px;
+padding: 50px 50px;
+min-height: 300px;
+max-height: 600px;
+border: 1px solid #000;
+text-decoration: none;
+border: 5px solid white;
+border-top-left-radius: 40px;
+border-bottom-right-radius: 40px;
+
+box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.5);
+
+filter:brightness(0.55);
+
+transform: skewX(-10deg);
+transition: transform 100ms;
+}
+
+.rhombus-container img{
+  width: 500px;
+  max-width: 100%;
+}
+
+.bg-blue{
+  background-color: #273BE2;
+}
+
+.bg-red{
+  background-color: #E34234;
+}
+
+.bg-yellow{
+  background-color: #FFA500;
+}
+
+.rhombus-content{
+  width:100%;
+  transform: skewX(10deg);
+}
+
+.rhombus-container:hover { 
+
+  transform: skew(-10deg) scale(1.2);
+  box-shadow: 0px 3px 30px 4px rgba(215, 215, 215, 0.3);
+
+  
+  border: 10px solid white;
+  z-index: 3;
+
+  filter:brightness(1);
+
+  animation: brighten 120ms;
+
+  
+}
+
+/* .characterSelect-bg{
+  position: absolute;
+  top: -100px;
+  right: px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+  z-index: -100;
+  height: 1000px !important;
+  width:600px !important;
+} */
+
+.role_text{
+  text-align: end;
+}
+
+.rhombus-container:hover h2,
+.rhombus-container:hover h1
+{
+  text-shadow: 1px 4px 5px #000;
+}
+
+
+.dots__blink1{
+  animation: blink 1.2s infinite 200ms;
+}
+
+.dots__blink2{
+  animation: blink 1.2s infinite 600ms;
+}
+
+.dots__blink3{
+  animation: blink 1.2s infinite 1000ms;
+}
+
+
+
+/* Animations */
+
+@keyframes blink {
+  0% { opacity: 0; }
+
+  100% { opacity: 1; }
 }
 
 html, body{
