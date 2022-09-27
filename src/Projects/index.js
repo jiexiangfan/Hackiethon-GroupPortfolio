@@ -160,8 +160,8 @@ const ProjectsScreen = () => {
       </div>
       <div className="Nav-Bar">
         <NavButton text="Home" href="/" />
-        <NavButton text="Projects" />
-        <NavButton text="About" />
+        <NavButton text="Projects" href={"/projects/" + name} />
+        <NavButton text="Profile" href={"/profile/" + name} />
       </div>
     </div>
   );
@@ -169,13 +169,14 @@ const ProjectsScreen = () => {
 
 const NavButton = (props) => {
   return (
-    <motion.button
-      whileHover={{ scale: 1.1, color: "#FFFFFF" }}
-      className="Nav-Button"
-      href={props.href}
-    >
-      {props.text}
-    </motion.button>
+    <a href={props.href}>
+      <motion.button
+        whileHover={{ scale: 1.1, color: "#FFFFFF" }}
+        className="Nav-Button"
+      >
+        {props.text}
+      </motion.button>
+    </a>
   );
 };
 
