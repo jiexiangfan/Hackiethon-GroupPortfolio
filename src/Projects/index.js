@@ -5,16 +5,17 @@ import OceanScene from "../assets/OceanProject.png";
 import ProfilePic from "../assets/person.png";
 import ReturnIcon from "../assets/ReturnIcon.png";
 import React, { useState, useEffect } from "react";
-import Background from "../assets/ProjectBackground.png";
 import { Button } from "react-bootstrap";
 import useAudio from "../Hooks/useAudio";
 import cyberMusic from "../assets/EpicCyberpunk.mp3";
-
 import PauseIcon from "../assets/pause-button.png";
 import PlayIcon from "../assets/play-button.png";
-import Navbar from "../assets/nav.png";
+import { useGetProfileUsingParam } from "../Hooks/getProfile";
 
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import SelectBtn from "./SelectionBtn.js";
+import AudioBtn from "./AudioBtn.js";
+import MovingProfile from "./MovingProfile.js";
 
 let ProjectsData = [
   {
@@ -76,9 +77,9 @@ const ProjectView = (props) => {
         style={{
           color: "white",
           textAlign: "left",
-          fontWeight: "lighter",
           marginBottom: "3.5rem",
           marginTop: "4rem",
+          textDecorationLine: "underline",
         }}
         variants={child}
       >
@@ -99,24 +100,11 @@ const ProjectView = (props) => {
 
 const Projects = () => {
   const [project, setCurrentProject] = useState(ProjectsData[0]);
-  const [playing, setPlay] = useAudio(cyberMusic);
-  const controls = useAnimation();
-  const OnClickProjectBtn = (data) => {
-    setCurrentProject(data);
-  };
 
-  const playingBtn = {
-    playing: {
-      scale: [0.95, 1.05, 0.93, 1.05, 0.9],
-      transition: {
-        duration: 2,
-        times: [0, 0.1, 0.3, 0.8, 1],
-        ease: "easeOut",
-        repeat: Infinity,
-        type: "spring",
-      },
-    },
-  };
+  let foundProfile = useGetProfileUsingParam();
+  useEffect(() => {
+    console.log(foundProfile);
+  }, []);
 
   return (
     <div className="Whole-Page">
@@ -147,34 +135,11 @@ const Projects = () => {
           <div className="Project-Buttons">
             {ProjectsData.map(function (obj, idx) {
               return (
-                <motion.div
+                <SelectBtn
+                  projectName={obj.projectName}
                   key={idx}
-                  whileHover={{
-                    x: 32,
-                    scale: 1.05,
-                    transition: {
-                      type: "spring",
-                      velocity: 2,
-                      duration: 0.1,
-                    },
-                  }}
-                  whileTap={{
-                    scale: 0.85,
-                    transition: {
-                      type: "spring",
-                      velocity: -50,
-                    },
-                  }}
-                  className="Button-Bg"
-                >
-                  <Button
-                    bsPrefix="bg-Project-Button"
-                    key={idx}
-                    onClick={() => OnClickProjectBtn(obj)}
-                  >
-                    {obj.projectName}
-                  </Button>
-                </motion.div>
+                  onClick={() => setCurrentProject(obj)}
+                />
               );
             })}
           </div>
@@ -203,52 +168,8 @@ const Projects = () => {
             width: "25%",
           }}
         >
-          <motion.img
-            animate={{
-              transform: [
-                "perspective(400px) rotateY(-12deg)",
-                "perspective(400px) rotateY(12deg)",
-              ],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              repeatType: "reverse",
-              type: "easeInOut",
-            }}
-            className="Profile-Pic"
-            src={ProfilePic}
-          />
-          <Button
-            style={{
-              width: "85px",
-              height: "85px",
-              margin: "50px",
-              alignItems: "center",
-              display: "flex",
-              justifyContent: "center",
-              backgroundColor: "transparent",
-              border: "none",
-            }}
-            onClick={() => {
-              if (!playing) {
-                controls.start("playing");
-              } else {
-                controls.stop();
-              }
-              setPlay(!playing);
-            }}
-          >
-            <motion.img
-              animate={controls}
-              variants={playingBtn}
-              src={playing ? PauseIcon : PlayIcon}
-              style={{
-                width: "85px",
-                height: "85px",
-              }}
-            />
-          </Button>
+          <MovingProfile ProfilePic={ProfilePic} />
+          <AudioBtn />
         </div>
       </div>
       <div className="Nav-Bar">

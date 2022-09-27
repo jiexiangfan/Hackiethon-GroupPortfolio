@@ -12,10 +12,10 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-position: "center";
-  background-size: "cover";
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-image:url("./assets/ProjectBackground.png");
+  background-image:url("./assets/home-bg.jpg");
   font-family: 'Nebula'
 }
 
