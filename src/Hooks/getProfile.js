@@ -20,7 +20,7 @@ const profileData = [
     imageUrl: "chris.png",
     role:"Developer",
     profileLink: "/Profile/Chris"
-    },
+  },
 ]
 
 const useGetProfileUsingParam = () => {
