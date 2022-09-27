@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import "../App.css";
 import TrumpImage from "../assets/Trump.png";
 import CP2077 from "../assets/CP2077.png";
@@ -5,7 +6,7 @@ import OceanScene from "../assets/OceanProject.png";
 import ProfilePic from "../assets/person.png";
 import ReturnIcon from "../assets/ReturnIcon.png";
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import useAudio from "../Hooks/useAudio";
 import cyberMusic from "../assets/EpicCyberpunk.mp3";
 
@@ -30,27 +31,7 @@ let ProjectsData = [
   },
 ];
 
-const ProjectView = (props) => {
-  return (
-    <div className="Project-View">
-      <h1
-        style={{
-          color: "white",
-          textAlign: "left",
-          fontWeight: "lighter",
-          marginBottom: "3.5rem",
-          marginTop: "4rem",
-        }}
-      >
-        {props.projectName}
-      </h1>
-      <img className="Project-Image" src={props.imageSrc} alt="" />
-      <p className="Project-Description">{props.projectDescription}</p>
-    </div>
-  );
-};
-
-const Projects = () => {
+const Profile = () => {
   const [project, setCurrentProject] = useState(ProjectsData[0]);
   const [fade, setFade] = useState(false);
   const [playing, setPlay] = useAudio(cyberMusic);
@@ -67,52 +48,66 @@ const Projects = () => {
   return (
     <div className="Project-Page">
       <div className="Project-Left">
-        <div
-          style={{
-            position: "absolute",
-            marginLeft: "2rem",
-            marginTop: "2rem",
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "row",
-          }}
-        >
-          <img src={ReturnIcon} style={{ width: "50px", height: "50px" }} />
-          <h1
-            style={{
-              color: "white",
-              position: "relative",
-              fontWeight: "lighter",
-              marginLeft: "15px",
-            }}
-          >
-            Projects
-          </h1>
-        </div>
-
-        <div className="Project-Buttons">
-          {ProjectsData.map(function (obj, idx) {
-            return (
-              <Button
-                bsPrefix="bg-Project-Button"
-                key={idx}
-                onClick={() => OnClickProjectBtn(obj)}
-              >
-                {obj.projectName}
-              </Button>
-            );
-          })}
-        </div>
-        <div
-          className={fade ? "fadeIn" : "fadeOut"}
-          style={{ width: "75%", backgroundColor: "rgb(30,129,176, 0.2)" }}
-        >
-          <ProjectView
-            projectName={project.projectName}
-            imageSrc={project.img}
-            projectDescription={project.projectDescription}
-          />
-        </div>
+        <Container>
+          <Row>
+            <Col>
+              <Row>
+                {" "}
+                <div
+                  style={{
+                    position: "absolute",
+                    marginLeft: "2rem",
+                    marginTop: "2rem",
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "row",
+                  }}
+                >
+                  <img
+                    src={ReturnIcon}
+                    styles={{ width: "50px", height: "50px" }}
+                  />
+                  <h1
+                    style={{
+                      color: "white",
+                      position: "relative",
+                      fontWeight: "lighter",
+                      marginLeft: "15px",
+                    }}
+                  >
+                    About / Skills
+                  </h1>
+                </div>
+              </Row>
+              <Row style={{ marginTop: "175px" }}>
+                <h2>About me:</h2>
+                <p >
+                  aboutme about me about me about me about me. about me about
+                  eme about me
+                </p>
+              </Row>
+              <Row>
+                <h2> Role:</h2>
+                <p > - Software Engineer</p>
+              </Row>
+              <Row>
+                <h2> Qualifications:</h2>
+                <p> - Bachelor</p>
+                <p> - Master</p>
+              </Row>
+              <Row>
+                <h2> Experience:</h2>
+                <p> - Job A</p>
+                <p> - Job B</p>
+              </Row>
+            </Col>
+            <Col>
+              <Row style={{ marginTop: "175px" }}>
+                <h2>Skills</h2>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
       </div>
       <div
         style={{
@@ -150,4 +145,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Profile;
