@@ -23,10 +23,9 @@ const Profile = () => {
       <div className="Project-Page ">
         <div className="Project-Left">
           <Container className="Profile-Page">
-            <Row style={{ paddingLeft: "2%" }}>
+            <Row style={{ paddingLeft: "2.5%" }}>
               <Col>
                 <Row>
-                  {" "}
                   <div
                     style={{
                       position: "absolute",
@@ -37,28 +36,28 @@ const Profile = () => {
                       flexDirection: "row",
                     }}
                   >
-                    <a href="/">
+                    <a href="/" styles={{ width: "25px", height: "25px" }}>
                       <img
                         src={ReturnIcon}
-                        styles={{ width: "50px", height: "50px" }}
+                        styles={{ width: "25px", height: "25px" }}
                       />
                     </a>
                   </div>
                 </Row>
-                <Row style={{ marginTop: "175px" }}>
-                  <h1>About me:</h1>
+                <Row style={{ marginTop: "175px", marginBottom: "1rem" }}>
+                  <h1 style={{ marginLeft: "-20px" }}>About me:</h1>
                   <p>{profile && profile.aboutMe}</p>
                 </Row>
-                <Row>
-                  <h1> Role:</h1>
+                <Row style={{ marginBottom: "1rem" }}>
+                  <h1 style={{ marginLeft: "-20px" }}> Role:</h1>
                   <p> {profile && profile.role}</p>
                 </Row>
-                <Row>
-                  <h1> Qualifications:</h1>
+                <Row style={{ marginBottom: "1rem" }}>
+                  <h1 style={{ marginLeft: "-20px" }}> Qualifications:</h1>
                   <p>{profile && profile.qualifications}</p>
                 </Row>
-                <Row>
-                  <h1> Experience:</h1>
+                <Row style={{ marginBottom: "1rem" }}>
+                  <h1 style={{ marginLeft: "-20px" }}> Experience:</h1>
                   {profile && profile.experience.map((item) => <p>→ {item}</p>)}
                 </Row>
               </Col>
