@@ -13,6 +13,7 @@ h1, h2, p {
   background-color: #000;
   height: 100vh;
   font-family: nebulaRegular;
+  background-image: url("./assets/home-bg.jpg");
 }
 
 .title{
@@ -33,6 +34,10 @@ max-height: 600px;
 border: 1px solid #000;
 text-decoration: none;
 border: 5px solid white;
+border-top-left-radius: 40px;
+border-bottom-right-radius: 40px;
+
+box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.5);
 
 filter:brightness(0.55);
 
@@ -66,15 +71,28 @@ transition: transform 100ms;
 
   transform: skew(-10deg) scale(1.2);
   box-shadow: 0px 3px 30px 4px rgba(215, 215, 215, 0.3);
-  filter:brightness(1);
+
+  
   border: 10px solid white;
   z-index: 3;
+
+  filter:brightness(1);
+
+  animation: brighten 120ms;
+
+  
 }
 
-/* .name_box{
-  background-color: rgba(223, 223, 223, 0.5);
-  border: solid 5px #000;
-  padding: 5px 0px 0px 20px
+/* .characterSelect-bg{
+  position: absolute;
+  top: -100px;
+  right: px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+  z-index: -100;
+  height: 1000px !important;
+  width:600px !important;
 } */
 
 .role_text{
@@ -101,12 +119,41 @@ transition: transform 100ms;
 }
 
 
+
 /* Animations */
 
 @keyframes blink {
   0% { opacity: 0; }
 
   100% { opacity: 1; }
+}
+
+@keyframes brighten {
+  
+  0% {
+    box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.5);
+  }
+
+  20% {
+    box-shadow: inset 0 0 0 160px rgba(0, 0, 0, 0.5);
+  }
+
+  40% {
+    box-shadow: inset 0 0 0 120px rgba(0, 0, 0, 0.5);
+  }
+
+  60% {
+    box-shadow: inset 0 0 0 80px rgba(0, 0, 0, 0.5);
+  }
+
+  80% {
+    box-shadow: inset 0 0 0 40px rgba(0, 0, 0, 0.5);
+  }
+
+  100%{
+    box-shadow: inset 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+
 }
 
 /* Font */

@@ -17,7 +17,7 @@ function Home() {
   });
 
   return (
-    <div class="d-flex flex-column home-container ">
+    <div class="d-flex flex-column home-container">
       <h1 class="container title">
         Choose Your Developer <span class="dots__blink1">.</span>{" "}
         <span class="dots__blink2">.</span> <span class="dots__blink3">.</span>{" "}
