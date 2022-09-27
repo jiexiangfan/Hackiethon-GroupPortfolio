@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 const SelectBtn = (props) => {
   return (
     <motion.div
-      key={props.key}
+      key={props.index}
       whileHover={{
         x: 32,
         scale: 1.05,

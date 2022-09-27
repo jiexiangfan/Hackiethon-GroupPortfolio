@@ -21,36 +21,38 @@ const AudioBtn = (props) => {
   };
 
   return (
-    <Button
-      style={{
-        width: "85px",
-        height: "85px",
-        margin: "50px",
-        alignItems: "center",
-        display: "flex",
-        justifyContent: "center",
-        backgroundColor: "transparent",
-        border: "none",
-      }}
-      onClick={() => {
-        if (!playing) {
-          controls.start("playing");
-        } else {
-          controls.stop();
-        }
-        setPlay(!playing);
-      }}
-    >
-      <motion.img
-        animate={controls}
-        variants={playingBtn}
-        src={playing ? PauseIcon : PlayIcon}
+    <>
+      <Button
         style={{
           width: "85px",
           height: "85px",
+          margin: "50px",
+          alignItems: "center",
+          display: "flex",
+          justifyContent: "center",
+          backgroundColor: "transparent",
+          border: "none",
         }}
-      />
-    </Button>
+        onClick={() => {
+          if (!playing) {
+            controls.start("playing");
+          } else {
+            controls.stop();
+          }
+          setPlay(!playing);
+        }}
+      >
+        <motion.img
+          animate={controls}
+          variants={playingBtn}
+          src={playing ? PauseIcon : PlayIcon}
+          style={{
+            width: "85px",
+            height: "85px",
+          }}
+        />
+      </Button>
+    </>
   );
 };
 export default AudioBtn;
