@@ -6,13 +6,8 @@ import { useGetAllProfiles, useGetProfileUsingParam } from "../Hooks/getProfile"
 function Home() {
   let profileData = useGetAllProfiles();
 
-  let foundProfile = useGetProfileUsingParam();
-
-
   useEffect(() => {
     console.log(profileData);
-
-    console.log(foundProfile)
 
   });
 
