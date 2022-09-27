@@ -5,7 +5,9 @@ const profileData = [
   {
     name: "Jie",
     imageUrl: "jie.png",
-    role: "Developer",
+    role: "Student Software Engineer",
+    aboutMe:
+      "I am a student software engineer who is passionate about creating new things. I am currently studying at the Monash University and I am looking for a full time role in the software industry. I am a fast learner and I am always looking to improve my skills. I am also a team player and I am always willing to help others.",
     profileLink: "/Profile/Jie",
   },
 

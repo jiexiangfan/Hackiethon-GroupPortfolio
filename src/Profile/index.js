@@ -46,7 +46,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="Project-Page">
+    <div className="Whole-Page">
       <div className="Project-Left">
         <Container>
           <Row>
@@ -81,14 +81,14 @@ const Profile = () => {
               </Row>
               <Row style={{ marginTop: "175px" }}>
                 <h2>About me:</h2>
-                <p >
+                <p>
                   aboutme about me about me about me about me. about me about
                   eme about me
                 </p>
               </Row>
               <Row>
                 <h2> Role:</h2>
-                <p > - Software Engineer</p>
+                <p> - Software Engineer</p>
               </Row>
               <Row>
                 <h2> Qualifications:</h2>
