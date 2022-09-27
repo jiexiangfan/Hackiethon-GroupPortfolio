@@ -5,7 +5,7 @@ const profileData = [
   {
     name: "Jie",
     imageUrl: "jie.png",
-    role: "Student Software Engineer",
+    role: "Software Engineer",
     qualifications: ["Bachelor of Software Engineering (Honours)"],
     experience: ["Intern Consultant", "Frontend developer"],
     aboutMe:
