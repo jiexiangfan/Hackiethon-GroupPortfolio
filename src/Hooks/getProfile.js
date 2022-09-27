@@ -84,7 +84,7 @@ const profileData = [
       },
       {
         projectName: "Communla Stickies Wall",
-        projectImage: "chrisProject_exerciseMap.jpg",
+        projectImage: "chrisProject_stickiesWall.jpg",
         projectDescription: "Users can share a sticky note with a message for everyone to see. They can also choose the colour of their sticky note. They can share a joke, their thoughts, have a vent...etc. It is a react based application using MongoDB to save the note and colour data.",
         projectLink: "https://stickies-wall-by-chris.herokuapp.com/"
       }
